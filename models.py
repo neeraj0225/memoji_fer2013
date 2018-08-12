@@ -48,6 +48,7 @@ class EmoNet():
 			x = tf.nn.dropout(x, dropout_placeholder)
 
 		logits = tf.contrib.layers.fully_connected(x, self.n_outputs, activation_fn=None, scope="classification")
+		print "neeraj"
 
 		if is_training:
 			return logits, dropout_placeholder
